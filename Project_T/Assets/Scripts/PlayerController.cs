@@ -26,6 +26,5 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime;
         rbody.MovePosition(rbody.position + nextVec);
-
     }
 }
