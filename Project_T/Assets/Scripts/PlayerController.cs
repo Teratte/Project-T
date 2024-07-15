@@ -9,9 +9,9 @@ public class PlayerController : MonoBehaviour
     private int currentHP = 0;
 
     [SerializeField]
-    public float speed;
+    public float speed;         // 플레이어 이동속도
     [SerializeField]
-    public int maxHP;
+    public int maxHP;           // 플레이어의 최대 체력
  
     // Start is called before the first frame update
     void Start()
