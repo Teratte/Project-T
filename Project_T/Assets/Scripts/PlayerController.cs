@@ -6,14 +6,18 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rbody;
     public Vector2 inputVec;
+    private int currentHP = 0;
 
     [SerializeField]
     public float speed;
+    [SerializeField]
+    public int maxHP;
  
     // Start is called before the first frame update
     void Start()
     {
-        rbody = GetComponent<Rigidbody2D>();   
+        rbody = GetComponent<Rigidbody2D>();
+        currentHP = maxHP;
     }
 
     // Update is called once per frame
@@ -21,6 +25,8 @@ public class PlayerController : MonoBehaviour
     {
         inputVec.x = Input.GetAxisRaw("Horizontal");
         inputVec.y = Input.GetAxisRaw("Vertical");
+
+        Debug.Log(currentHP);
     }
     void FixedUpdate()
     {
