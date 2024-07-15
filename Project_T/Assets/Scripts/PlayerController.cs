@@ -23,34 +23,13 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+        inputVec.x = Input.GetAxisRaw("Horizontal");
+        inputVec.y = Input.GetAxisRaw("Vertical");
         Debug.Log(currentHP);
     }
     void FixedUpdate()
     {
         Vector2 nextVec = inputVec.normalized * speed * Time.fixedDeltaTime;
         rbody.MovePosition(rbody.position + nextVec);
-    }
-
-    void Move()
-    {
-        inputVec = Vector2.zero;
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            inputVec.y += 1;
-        }
-        if (Input.GetKey(KeyCode.S))
-        {
-            inputVec.y -= 1;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            inputVec.x -= 1;
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            inputVec.x += 1;
-        }
     }
 }
