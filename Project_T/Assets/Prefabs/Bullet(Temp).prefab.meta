@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Project_T/Assets/Prefabs/Bullet(Temp).prefab.meta
 guid: 261d494c5cc237c42af0802c1ccb6ac7
+========
+guid: e41adcbafe95b4043b48abb8a35a1051
+>>>>>>>> enemy:Project_T/Assets/Prefabs/Enemy A.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
