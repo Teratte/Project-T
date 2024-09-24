@@ -8889,6 +8889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1792766339044268585, guid: e41adcbafe95b4043b48abb8a35a1051, type: 3}
+  - {fileID: 721832918523639718, guid: 1b641d00cdb88af42848e4165865e7f7, type: 3}
 --- !u!4 &479871346
 Transform:
   m_ObjectHideFlags: 0
@@ -8967,7 +8968,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.185185
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -13599,7 +13600,7 @@ GameObject:
   - component: {fileID: 1009850863}
   m_Layer: 0
   m_Name: Player(Temp)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18282,7 +18283,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1009850860}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 8.185185
+    OrthographicSize: 6
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0

@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour
 
     float timer;
     int level;
+    public float fireRate;
 
     void Awake()
     {
@@ -18,12 +19,19 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        fireRate += Time.deltaTime;
+
         level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f), spawnData.Length - 1);
 
         if (timer > spawnData[level].spawnTime)
         {
             timer = 0;
             Spawn();
+        }
+        if(fireRate >= 10f)
+        {
+            fireRate = 0;
+            FireBullet();
         }
     }
 
@@ -32,6 +40,12 @@ public class Spawner : MonoBehaviour
         GameObject enemy = GameManager.instance.pool.Get(0);
         enemy.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
         enemy.GetComponent<Enemy>().Init(spawnData[level]);
+    }
+
+    void FireBullet()
+    {
+        GameObject enemyBullet = GameManager.instance.pool.Get(1);
+        enemyBullet.transform.position = spawnPoint[Random.Range(1, spawnPoint.Length)].position;
     }
 }
 [System.Serializable]
