@@ -24,6 +24,8 @@ public class EnemyBullet : MonoBehaviour
             // 플레이어가 없는 경우 기본 방향 (필요시 설정)
             targetDirection = Vector2.right;
         }
+
+        Destroy(gameObject, 10f);
     }
 
     void Update()
